@@ -1,0 +1,8 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+data/vpt/*.jsonl
+data/experience.csv
+data/q_table.json
