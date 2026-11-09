@@ -1,0 +1,58 @@
+{
+  "source": "OpenAI VPT contractor action demonstrations",
+  "method": "heuristic control-to-action mapping with smoothed first-order action prior",
+  "samples": 18239,
+  "skipped_or_unmapped": 1663,
+  "files": 4,
+  "class_counts": {
+    "gather": 9253,
+    "build": 309,
+    "hunt": 0,
+    "trade": 58,
+    "explore": 8619
+  },
+  "priors": {
+    "gather": 0.5072352554264415,
+    "build": 0.016991887743915808,
+    "hunt": 5.4812541109405835e-05,
+    "trade": 0.003233939925454944,
+    "explore": 0.47248410436307825
+  },
+  "transitions": {
+    "explore": {
+      "gather": 0.020178592137307202,
+      "build": 0.013336425837875449,
+      "hunt": 0.00011596892032935173,
+      "trade": 0.001739533804940276,
+      "explore": 0.9646294792995477
+    },
+    "build": {
+      "gather": 0.0031847133757961785,
+      "build": 0.6242038216560509,
+      "hunt": 0.0031847133757961785,
+      "trade": 0.0031847133757961785,
+      "explore": 0.3662420382165605
+    },
+    "trade": {
+      "gather": 0.015873015873015872,
+      "build": 0.015873015873015872,
+      "hunt": 0.015873015873015872,
+      "trade": 0.6031746031746031,
+      "explore": 0.3492063492063492
+    },
+    "gather": {
+      "gather": 0.9809832522960562,
+      "build": 0.00010804970286331713,
+      "hunt": 0.00010804970286331713,
+      "trade": 0.000864397622906537,
+      "explore": 0.01793625067531064
+    }
+  },
+  "limitations": [
+    "This is not OpenAI's original VPT neural network or pretrained weights.",
+    "Minecraft actions are coarsely mapped to EVOLVE actions; target context is absent from action-only JSONL.",
+    "Left-click is ambiguous between mining and attacking; it is mapped to gather.",
+    "Hunt is learned from EVOLVE's own online interaction because the action trace cannot identify the target.",
+    "The prior biases action selection; EVOLVE's online Q-learning updates from its own state and rewards."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "q": {
+    "new|balanced|wild|fed|healthy": [
+      0.47557798271999996,
+      0.36,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "build|balanced|wild|fed|healthy": [
+      2.8237538624368064,
+      1.0568399616,
+      1.295052531169115,
+      0.4698282901118171,
+      0.4466403952192876
+    ]
+  },
+  "epsilon": 0.24212276893988172,
+  "updates": 32,
+  "counts": {
+    "mine": 0,
+    "build": 0,
+    "trade": 0,
+    "explore": 0,
+    "hunt": 0,
+    "npc": 0,
+    "agent_gather": 22,
+    "agent_build": 4,
+    "agent_hunt": 3,
+    "agent_explore": 2,
+    "agent_trade": 1
+  }
+}

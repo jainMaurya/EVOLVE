@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVOLVE — Living Voxel World</title><link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="game"></div>
+<div id="ui">
+ <header><div class="logo"><b>E</b><span>EVOLVE<small>LIVING VOXEL WORLD</small></span></div><div class="header-right"><span id="connection" class="pill offline">PYTHON RL · CONNECTING</span><span class="pill" id="day">DAY 1</span><span class="pill" id="day-timer">04:00 TO NIGHT</span></div></header>
+ <div class="stats"><div><small>COINS</small><b id="coins">30</b></div><div class="health-stat"><small>HEALTH</small><b><span id="health">100</span>/100</b><div class="health-track"><i id="health-fill"></i></div></div><div><small>PLAY STYLE</small><b id="style">UNDISCOVERED</b></div></div>
+ <div class="crosshair">+</div>
+ <div class="objective"><b>YOUR WORLD, YOUR RULES</b><span>Build, harvest, trade. The Python agent adapts the settlement to your play style.</span></div>
+ <button id="auto-toggle" class="auto-toggle">RL AUTONOMY: OFF</button><div class="rl-panel"><div class="rl-title"><i></i> PYTHON REINFORCEMENT LEARNING <b id="rl-status">WAITING</b></div><div class="rl-row"><span>Current policy</span><b id="policy">Exploring</b></div><div class="rl-row"><span>Learning updates</span><b id="updates">0</b></div><div class="rl-row"><span>Exploration rate</span><b id="epsilon">0.25</b></div><div class="rl-row"><span>VPT action samples</span><b id="vpt-samples">0</b></div><div class="rl-row"><span>Player preference</span><b id="preference">—</b></div></div>
+ <div class="inventory" id="inventory">
+  <button class="slot selected" data-slot="1"><kbd>1</kbd><span>🪵</span><small>WOOD <b id="wood">8</b></small></button>
+  <button class="slot" data-slot="2"><kbd>2</kbd><span>🪨</span><small>STONE <b id="stone">5</b></small></button>
+  <button class="slot" data-slot="3"><kbd>3</kbd><span>⌫</span><small>DELETE</small></button>
+  <button class="slot" data-slot="4"><kbd>4</kbd><span>🍎</span><small>FOOD <b id="food">6</b></small></button>
+ </div>
+ <div class="hint" id="hint">WASD / Arrow keys move · Mouse look · V toggle view · Scroll zoom · Space jump · 4 + Left click eat · RL autonomy button · Left click place · Right click harvest/attack · E interact · Esc unlock mouse</div>
+ <div id="toast"></div><div id="welcome"><div class="eyebrow">A WORLD THAT LEARNS YOU</div><h1>Build a world.<br><em>Change its future.</em></h1><p>Third-person voxel sandbox with a separate Python reinforcement-learning agent.</p><button id="start">ENTER WORLD</button><small>Python agent runs locally beside the browser game.</small></div>
+ <div id="feed"><b>WORLD LOG</b><span id="feedline">The valley is quiet. Your choices will shape it.</span></div>
+</div>
+<script type="module" src="src/game.js"></script>
+</body></html>
